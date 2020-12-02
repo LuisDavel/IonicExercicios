@@ -1,0 +1,7 @@
+{
+  "name": "AcervoBiblioteca",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
