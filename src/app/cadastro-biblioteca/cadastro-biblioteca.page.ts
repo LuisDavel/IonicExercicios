@@ -21,6 +21,9 @@ export class CadastroBibliotecaPage implements OnInit {
   ) { 
     this.biblioteca = new biblioteca();    
     const codigo = parseInt(this.activatedRoute.snapshot.paramMap.get('codigo'));
+    if(codigo) {
+      this.biblioteca.codigo = this.LivreService.getCodigo()
+    }
   }
 
   ngOnInit() {
@@ -28,7 +31,7 @@ export class CadastroBibliotecaPage implements OnInit {
 
   salvar() {
     console.log(this.biblioteca);
-    this.LivreService.salvar(this.biblioteca);    
+    this.LivreService.salvar(this.biblioteca); 
     this.router.navigate(['bibliotecas'])
   }
 

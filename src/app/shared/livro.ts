@@ -8,7 +8,7 @@ export class livro{
     descricao: string;
     autor: string;
     data_lancamento: Date | string;
-    editor: string
+    editor: string;
     genero: Genero;
     //
 
