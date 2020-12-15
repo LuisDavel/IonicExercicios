@@ -1,4 +1,4 @@
-export enum Rankeada{
+export enum Genero{
     ACAO = 'Ação',
     ROMANCE = 'Romance',
     DRAMA = 'Drama',

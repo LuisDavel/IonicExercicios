@@ -1,71 +1,75 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Acervo de Livros</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app  >
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title> Acervo de Livros </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
-  <ion-list>
-    <!-- <ion-list-header>  <strong>Livros Cadastrados</strong> </ion-list-header> -->
+  <ion-content >
+    <ion-list >
+      <ion-item-sliding *ngFor="let livro of listaLivro">
 
-    <ion-item-sliding *ngFor="let livro of listaLivro">   
-      <ion-item>
+        <ion-item>
 
-        <ion-avatar slot="start">
-          <img [src]="livro.foto_livro" />
-        </ion-avatar>
+            <ion-avatar  slot="start">
+              <img [src]="livro.foto_livro" />
+            </ion-avatar>
 
-        <ion-label>
-          <h2><strong>{{livro.titulo}}</strong></h2>
-          <h3> Descrição:
-            <ion-text color="black">
-              <strong>{{livro.descricao}}</strong>
-            </ion-text>
-        </h3>
+            <ion-label>
+              <ion-card >
 
-          <h3>Autor: {{livro.autor}}</h3>
+                <ion-card-header>
+                  <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                  <ion-card-title><strong>{{livro.titulo}}</strong></ion-card-title>
+                </ion-card-header>
+              
+                <ion-card-content>
 
-        
-          <h3> Gênero:
-            <ion-text color="dark">
-              <strong>{{livro.genero}}</strong>
-            </ion-text>
-          </h3>
+                  <h3> Descrição:
+                    <ion-text color="black">
+                      <strong>{{livro.descricao}}</strong>
+                    </ion-text>
+                  </h3>
 
-          <h3> Classificação:
-            <ion-text color="danger">
-              <strong>{{livro.faixa_etaria}}</strong>
-            </ion-text>
-          </h3>
+                  <h3>Autor: {{livro.autor}}</h3>
 
-          <h3>Editor: {{livro.editor}}</h3>
+                  <h3> Gênero:
+                    <ion-text color="secondary">
+                      <strong>{{livro.genero}}</strong>
+                    </ion-text>
+                  </h3>
+      
+                  <h3>Editor: {{livro.editor}}</h3>
+      
+                  <h4>Data de Lançamento: {{livro.data_lancamento | date: 'dd/MM/yyyy' }}</h4>
+      
+                </ion-card-content>
+              </ion-card>
+            </ion-label>
+        </ion-item>
 
-          <h4>Data de Lançamento: {{livro.data_lancamento | date: 'dd/MM/yyyy' }}</h4>
+        <ion-item-options side="end">
+          <ion-item-option color="danger" (click)="excluir(livro)">
+            <ion-icon name="trash" slot="icon-only"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
 
-        </ion-label>    
 
-      </ion-item>
-
-      <ion-item-options side="end">
-        <ion-item-option color="danger" (click)="excluir(livro)">
-          <ion-icon name="trash" slot="icon-only"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-
-      <ion-item-options side="start">
-        <ion-item-option (click)="editar(livro)">
-          <ion-icon name="pencil" slot="icon-only"></ion-icon>
-        </ion-item-option>
-      </ion-item-options>
-
-    </ion-item-sliding>
+      </ion-item-sliding>
+      <ion-fab vertical="bottom" horizontal="end">
+        <ion-fab-button>
+          <ion-icon name="add" [routerLink]="['/cadastro-livro']"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
   
-  </ion-list>
+    </ion-list>
 
-  <ion-fab vertical="bottom" horizontal="end">
-    <ion-fab-button>
-      <ion-icon name="add" [routerLink]="['/livro-cadastro']"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    
+    <ion-footer >
+      <ion-toolbar class="fotter">
+        <ion-title  class= "texto" >Feito por Leonardo Ghedin e Luis Davel</ion-title>
+      </ion-toolbar>
+    </ion-footer>
 
-</ion-content>
+  </ion-content>
+</ion-app>

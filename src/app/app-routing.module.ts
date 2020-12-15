@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'lista-livro',
     loadChildren: () => import('./lista-livro/lista-livro.module').then( m => m.ListaLivroPageModule)
+  },
+  {
+    path: 'cadastro-livro',
+    loadChildren: () => import('./cadastro-livro/cadastro-livro.module').then( m => m.CadastroLivroPageModule)
   }
 ];
 
