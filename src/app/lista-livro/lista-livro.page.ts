@@ -20,7 +20,7 @@ export class ListaLivroPage implements OnInit, ViewWillEnter {
 
   ngOnInit() {}
 
-  ionViewWillEnter() {
+  ionViewWillEnter() {  // executado quando a página está prestes a entrar 
     this.listar();
   }
 

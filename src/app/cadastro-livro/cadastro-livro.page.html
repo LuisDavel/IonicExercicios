@@ -6,29 +6,25 @@
 
 <ion-content class="background">
 
-  <ion-item>
-    <ion-label>Código</ion-label>
-    <ion-input [(ngModel)]="livro.codigo" type="number"></ion-input>
-  </ion-item>
-
+  
   <ion-item>
     <ion-label>Titulo</ion-label>
-    <ion-input [(ngModel)]="livro.titulo"></ion-input>
+    <ion-input [(ngModel)]="livro.titulo" placeholder="Titulo do livro"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Logo</ion-label>
-    <ion-input [(ngModel)]="livro.logo" placeholder="https://...."></ion-input>
+    <ion-input [(ngModel)]="livro.logo" placeholder="Cole a URL da imagem"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Descrição</ion-label>
-    <ion-input [(ngModel)]="livro.descricao" ></ion-input>
+    <ion-input [(ngModel)]="livro.descricao" placeholder="Descrição do livro"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Autor</ion-label>
-    <ion-input [(ngModel)]="livro.autor"></ion-input>
+    <ion-input [(ngModel)]="livro.autor" placeholder="Autor do livro"></ion-input>
   </ion-item>
 
   <ion-item>
@@ -41,7 +37,7 @@
 
   <ion-item>
     <ion-label>Editor</ion-label>
-    <ion-input [(ngModel)]="livro.editor"></ion-input>
+    <ion-input [(ngModel)]="livro.editor" placeholder="Editor do livro"></ion-input>
   </ion-item>
 
   <ion-item>

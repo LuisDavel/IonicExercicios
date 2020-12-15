@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./lista-livro/lista-livro.module').then( m => m.ListaLivroPageModule)
   },
   {
+    path: 'cadastro-livro/:codigo',
+    loadChildren: () => import('./cadastro-livro/cadastro-livro.module').then( m => m.CadastroLivroPageModule)
+  },
+  {
     path: 'cadastro-livro',
     loadChildren: () => import('./cadastro-livro/cadastro-livro.module').then( m => m.CadastroLivroPageModule)
   }

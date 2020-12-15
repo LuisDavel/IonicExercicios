@@ -13,7 +13,7 @@ export class CadastroLivroPage implements OnInit {
 
    
   livro: livro;
-  generos = Object.keys(Genero).map((key) => ({ valor: key, descricao: Genero[key]}));
+  generos = Object.keys(Genero).map((key) => ({ valor: key, descricao: Genero[key]})); // Retorna o array de todos os enums, map retorna o valor;
 
   constructor(
     private LivreService: LivreService,
@@ -25,7 +25,6 @@ export class CadastroLivroPage implements OnInit {
     
     const codigo = parseInt(this.activatedRoute.snapshot.paramMap.get('codigo'));
     if(codigo) {
-      //this.livro = this.LivreService.getLivros(codigo);
       if(this.livro.data_lancamento instanceof Date) {
         this.livro.data_lancamento = this.livro.data_lancamento.toISOString();
       }

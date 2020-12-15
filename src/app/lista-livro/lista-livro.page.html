@@ -5,13 +5,15 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content >
-    <ion-list >
-      <ion-item-sliding *ngFor="let livro of listaLivro">
+  <ion-content > <!-- "Div" -->
+
+    <ion-list > <!-- "Criar uma lista" -->
+
+      <ion-item-sliding *ngFor="let livro of listaLivro"> <!-- "Estrutura de repetição que percorre o item" -->
 
         <ion-item>
 
-            <ion-avatar  slot="start">
+            <ion-avatar  slot="start"> <!-- "Deixa para a direita" -->
               <img [src]="livro.foto_livro" />
             </ion-avatar>
 
@@ -19,7 +21,6 @@
               <ion-card >
 
                 <ion-card-header>
-                  <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
                   <ion-card-title><strong>{{livro.titulo}}</strong></ion-card-title>
                 </ion-card-header>
               
@@ -54,6 +55,11 @@
           </ion-item-option>
         </ion-item-options>
 
+        <ion-item-options side="start">
+          <ion-item-option (click)="editar(livro)">
+            <ion-icon name="pencil" slot="icon-only"></ion-icon>
+          </ion-item-option>
+        </ion-item-options>
 
       </ion-item-sliding>
       <ion-fab vertical="bottom" horizontal="end">
@@ -64,12 +70,11 @@
   
     </ion-list>
 
-    
-    <ion-footer >
-      <ion-toolbar class="fotter">
-        <ion-title  class= "texto" >Feito por Leonardo Ghedin e Luis Davel</ion-title>
-      </ion-toolbar>
-    </ion-footer>
-
   </ion-content>
+
+  <ion-footer >
+    <ion-toolbar class="fotter">
+      <ion-title  class= "texto" >Feito por Leonardo Ghedin e Luis Davel</ion-title>
+    </ion-toolbar>
+  </ion-footer>
 </ion-app>
