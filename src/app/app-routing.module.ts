@@ -18,6 +18,18 @@ const routes: Routes = [
   {
     path: 'cadastro-livro',
     loadChildren: () => import('./cadastro-livro/cadastro-livro.module').then( m => m.CadastroLivroPageModule)
+  },
+  {
+    path: 'bibliotecas',
+    loadChildren: () => import('./bibliotecas/bibliotecas.module').then( m => m.BibliotecasPageModule)
+  },
+  {
+    path: 'cadastro-biblioteca',
+    loadChildren: () => import('./cadastro-biblioteca/cadastro-biblioteca.module').then( m => m.CadastroBibliotecaPageModule)
+  },
+  {
+    path: 'cadastro-biblioteca/:codigo',
+    loadChildren: () => import('./cadastro-biblioteca/cadastro-biblioteca.module').then( m => m.CadastroBibliotecaPageModule)
   }
 ];
 

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Cadastro de Bibliotecas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="biblioteca.nome" placeholder="nome da bilbioteca"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Logo</ion-label>
+    <ion-input [(ngModel)]="biblioteca.logo" placeholder="Cole a URL da imagem"></ion-input>
+  </ion-item>
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="salvar()">
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+ 
